@@ -7,13 +7,13 @@ let totalImages = 0;
 let photosArray = [];
 let isInitialLoad = true;
 
+const initialCount = 5;
 //Unsplash API
-let initialCount = 5;
 const apiKey = "";
-let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${initialCount}`;
+let apiUrl = `/.netlify/functions/token-hider?count=${initialCount}`;
 
 function updateAPIURLWithNewCount(picCount) {
-  apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${picCount}`;
+  apiUrl = `/.netlify/functions/token-hider?count=${picCount}`;
 }
 // Check if all images were loaded
 function imageLoaded() {
